@@ -22,11 +22,17 @@ class Vehicle {
 		echo "I go <br/>";
 	}
 	public function __toString(){
-		$ans = "My name is " .$this->name. " and I am a " .get_class($this);
+		$ans = "I am a " .$this->name. " and I am a " .get_class($this);
 		return $ans;
 	}
 	public function getMPGS(){
-		$ans = "I get " . $this->mpg ." miles to the gallon and go " . $this->topspeed ." miles per hour.<br/>";
+		echo "I get " . $this->mpg ." miles to the gallon and go " . $this->topspeed ." miles per hour.<br/>";
+	
+	}
+	public function __set($property, $value){
+		if(property_exists($this,$property)){
+			$this-> $property = $value;
+		}
 	}
 	
 }

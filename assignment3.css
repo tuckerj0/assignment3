@@ -1,1 +1,11 @@
 /*styles for assignment 3*/
+.bd{
+	color: blue;
+}
+.plane{
+	color: red;
+}
+h1 {
+	color: black;
+	text-decoration: underline;
+}
